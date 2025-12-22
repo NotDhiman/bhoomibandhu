@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Crop Predictor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+ <header>
+  <div class="container header-flex">
+
+    <div class="logo">
+      <img src="Gemini_Generated_Image_7lty6p7lty6p7lty-removebg-preview.png" alt="BhoomiBandhu">
+      <span>BhoomiBandhu</span>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="insurance.html">Insurance</a>
+      <a href="schemes.html">Schemes</a>
+      <a href="financial.html">Financial</a>
+      <a href="ai-crop-predictor.html">AI Crop</a>
+      <a href="mental-health.html">Mental Health</a>
+      <a href="#" onclick="toggleTheme()">🌙</a>
+    </nav>
+
+  </div>
+</header>
+<section class="hero">
+  <div class="hero-content">
+    <span class="hero-badge">🌱 AI Powered Agriculture</span>
+    <h1>AI Crop Predictor</h1>
+    <p>Smart decisions for better yield & lower risk</p>
+
+    <div class="hero-stats">
+      <div>
+        <strong>95%</strong>
+        <span>Accuracy</span>
+      </div>
+      <div>
+        <strong>3+</strong>
+        <span>Inputs</span>
+      </div>
+      <div>
+        <strong>Instant</strong>
+        <span>Results</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="predict-section container">
+  <h2 class="predict-title">Predict Crop Yield & Risk</h2>
+
+  <div class="predict-form">
+    <input id="rainfall" type="number" placeholder="Rainfall (mm)">
+    <input id="temperature" type="number" placeholder="Temperature (°C)">
+
+    <select id="soil">
+      <option value="loamy">Loamy Soil</option>
+      <option value="clay">Clay Soil</option>
+      <option value="sandy">Sandy Soil</option>
+    </select>
+
+    <button class="predict-btn" onclick="predictCrop()">Predict</button>
+
+  </div>
+<!-- Prediction Result -->
+<div id="predictionResult" class="result-card hidden">
+
+  <div class="result-item">
+    🌾 <strong>Predicted Yield:</strong>
+    <span id="yieldValue">-</span>
+  </div>
+
+  <div class="confidence">
+    <div class="confidence-bar">
+      <div id="confidenceBar"></div>
+    </div>
+  </div>
+
+  <div class="result-item">
+    ⚠️ <strong>Risk Level:</strong>
+    <span id="riskValue">-</span>
+  </div>
+
+  <div class="result-item">
+    🌱 <strong>Recommended Crop:</strong>
+    <span id="cropValue">-</span>
+  </div>
+
+  <p id="aiAdvice" class="ai-advice"></p>
+
+</div>
+<p class="hint">
+🌡 Temp: 12–40°C &nbsp; | &nbsp; 🌧 Rainfall: 100–500 mm
+</p>
+
+
+</section>
+
+<section class="section container">
+  <div class="card feature-card">
+  <h3>🌦️ Weather Analysis</h3>
+  <p>
+    Analyze rainfall and temperature patterns to understand
+    weather impact on crops.
+  </p>
+  <span class="tag">Real-time insights</span>
+</div>
+
+<div class="card feature-card">
+  <h3>🌾 Yield Prediction</h3>
+  <p>
+    Predict crop yield using AI based on soil type,
+    rainfall, and temperature.
+  </p>
+  <span class="tag">AI Powered</span>
+</div>
+
+<div class="card feature-card">
+  <h3>⚠️ Risk Alerts</h3>
+  <p>
+    Identify potential risks like drought, low yield,
+    or adverse climate conditions.
+  </p>
+  <span class="tag">Early Warning</span>
+</div>
+
+</section>
+
+
+
+<footer>© 2025 BhoomiBandhu</footer>
+<script src="script.js"></script>
+<script>function predictCrop() {
+  const rainfall = Number(document.getElementById("rainfall").value);
+  const temperature = Number(document.getElementById("temperature").value);
+  const soil = document.getElementById("soil").value;
+
+  // Reset defaults
+yieldLevel = "Medium";
+riskLevel = "Medium";
+crop = "Not Suitable";
+
+// 🌾 WHEAT
+if (
+  soil === "loamy" &&
+  temperature >= 15 && temperature <= 25 &&
+  rainfall >= 150 && rainfall <= 300
+) {
+  crop = "Wheat 🌾";
+  yieldLevel = "High";
+  riskLevel = "Low";
+}
+
+// 🌾💧 RICE
+else if (
+  (soil === "clay" || soil === "loamy") &&
+  temperature >= 20 && temperature <= 35 &&
+  rainfall >= 250 && rainfall <= 400
+) {
+  crop = "Rice 🌾💧";
+  yieldLevel = "High";
+  riskLevel = "Low";
+}
+
+// 🌽 MAIZE
+else if (
+  soil === "loamy" &&
+  temperature >= 18 && temperature <= 30 &&
+  rainfall >= 200 && rainfall <= 350
+) {
+  crop = "Maize 🌽";
+  yieldLevel = "High";
+  riskLevel = "Medium";
+}
+
+// 🌿 COTTON
+else if (
+  soil === "clay" &&
+  temperature >= 25 && temperature <= 40 &&
+  rainfall >= 200 && rainfall <= 300
+) {
+  crop = "Cotton 🌿";
+  yieldLevel = "Medium";
+  riskLevel = "Medium";
+}
+
+// 🎋 SUGARCANE
+else if (
+  soil === "loamy" &&
+  temperature >= 20 && temperature <= 38 &&
+  rainfall >= 300 && rainfall <= 500
+) {
+  crop = "Sugarcane 🎋";
+  yieldLevel = "High";
+  riskLevel = "Medium";
+}
+
+// 🌾 MILLETS
+else if (
+  soil === "sandy" &&
+  temperature >= 25 && temperature <= 40 &&
+  rainfall >= 100 && rainfall <= 250
+) {
+  crop = "Millets 🌾";
+  yieldLevel = "Medium";
+  riskLevel = "Low";
+}
+
+// 🥜 GROUNDNUT
+else if (
+  soil === "sandy" &&
+  temperature >= 22 && temperature <= 35 &&
+  rainfall >= 150 && rainfall <= 300
+) {
+  crop = "Groundnut 🥜";
+  yieldLevel = "Medium";
+  riskLevel = "Medium";
+}
+
+// 🌾 BARLEY
+else if (
+  soil === "loamy" &&
+  temperature >= 12 && temperature <= 22 &&
+  rainfall >= 100 && rainfall <= 250
+) {
+  crop = "Barley 🌾";
+  yieldLevel = "Medium";
+  riskLevel = "Low";
+}
+
+// 🫘 PULSES
+else if (
+  (soil === "sandy" || soil === "loamy") &&
+  temperature >= 18 && temperature <= 30 &&
+  rainfall >= 100 && rainfall <= 200
+) {
+  crop = "Pulses 🫘";
+  yieldLevel = "Medium";
+  riskLevel = "Low";
+}
+
+// ❌ UNSUITABLE CONDITIONS
+else {
+  crop = "Not Suitable ❌";
+  yieldLevel = "Low";
+  riskLevel = "High";
+}
+
+
+document.getElementById("cropValue").textContent = crop;
+
+
+
+  // Show result
+  document.getElementById("predictionResult").classList.remove("hidden");
+
+  document.getElementById("yieldValue").textContent = yieldLevel;
+  document.getElementById("riskValue").textContent = riskLevel;
+  document.getElementById("cropValue").textContent = crop;
+
+  // Confidence bar
+  document.getElementById("confidenceBar").style.width =
+    yieldLevel === "High" ? "85%" :
+    yieldLevel === "Medium" ? "60%" : "35%";
+
+  // Advice
+  document.getElementById("aiAdvice").textContent =
+    riskLevel === "Low"
+      ? "Conditions are favorable. Maintain irrigation and nutrient balance."
+      : "Monitor rainfall and temperature closely to reduce crop risk.";
+}
+</script>
+
+</body>
+</html>
