@@ -233,8 +233,63 @@
   function toggleCard(card) {
     card.classList.toggle("active");
   }
+document.getElementById("eligibilityForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const scheme = document.getElementById("scheme").value;
+  const category = document.getElementById("category").value;
+  const land = parseFloat(document.getElementById("land").value);
+  const aadhaar = document.getElementById("aadhaar").value;
+  const bank = document.getElementById("bank").value;
+
+  const resultBox = document.getElementById("eligibilityResult");
+  resultBox.classList.remove("hidden", "success", "error");
+
+  // Common checks
+  if (aadhaar !== "yes" || bank !== "yes") {
+    resultBox.classList.add("error");
+    resultBox.innerHTML =
+      "❌ <b>Not Eligible</b><br>Aadhaar-linked bank account is mandatory.";
+    return;
+  }
+
+  // PM-KISAN
+  if (scheme === "pmkisan") {
+    if (category === "small" && land <= 2) {
+      resultBox.classList.add("success");
+      resultBox.innerHTML =
+        "✅ <b>Eligible for PM-KISAN</b><br>You may receive ₹6000 annual income support.";
+    } else {
+      resultBox.classList.add("error");
+      resultBox.innerHTML =
+        "❌ <b>Not Eligible</b><br>PM-KISAN is for small & marginal farmers only.";
+    }
+  }
+
+  // PMFBY
+  else if (scheme === "pmfby") {
+    resultBox.classList.add("success");
+    resultBox.innerHTML =
+      "✅ <b>Eligible for PMFBY</b><br>You can apply for crop insurance this season.";
+  }
+
+  // KCC
+  else if (scheme === "kcc") {
+    if (land > 0) {
+      resultBox.classList.add("success");
+      resultBox.innerHTML =
+        "✅ <b>Eligible for Kisan Credit Card</b><br>You can apply for agricultural credit.";
+    } else {
+      resultBox.classList.add("error");
+      resultBox.innerHTML =
+        "❌ <b>Not Eligible</b><br>Valid landholding is required for KCC.";
+    }
+  }
+});
+
 </script>
 
 </body>
 </html>
+
 
