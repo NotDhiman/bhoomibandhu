@@ -969,3 +969,122 @@ footer {
   color: #4f6f52;
   margin-top: 8px;
 }
+/* ============================= */
+/* INTERACTIVE SCHEME CARDS */
+/* ============================= */
+
+.interactive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.info-card {
+  background: linear-gradient(to right, #ffffff, #f7fbf7);
+  border-radius: 18px;
+  padding: 30px;
+  border-left: 6px solid var(--green);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: all 0.35s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+}
+
+.info-card h3 {
+  color: var(--green);
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+.short-text {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.card-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.45s ease;
+}
+
+.card-details ul {
+  margin-top: 16px;
+  padding-left: 18px;
+  line-height: 1.7;
+  color: #4f6f57;
+}
+
+.info-card.active .card-details {
+  max-height: 420px;
+}
+
+/* Mobile spacing */
+@media (max-width: 600px) {
+  .info-card {
+    padding: 24px;
+  }
+}
+/* ============================= */
+/* ELIGIBILITY CHECK FORM */
+/* ============================= */
+
+.eligibility-card {
+  max-width: 900px;
+  margin: auto;
+  background: linear-gradient(135deg, #ffffff, #f1f8f4);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.1);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.form-grid input,
+.form-grid select {
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.form-grid input:focus,
+.form-grid select:focus {
+  outline: none;
+  border-color: var(--green);
+  box-shadow: 0 0 6px rgba(27,94,32,0.25);
+}
+
+.result-box {
+  margin-top: 25px;
+  padding: 20px;
+  border-radius: 14px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.result-box.success {
+  background: #e8f5e9;
+  border-left: 6px solid #2e7d32;
+  color: #1b5e20;
+}
+
+.result-box.error {
+  background: #ffebee;
+  border-left: 6px solid #c62828;
+  color: #b71c1c;
+}
+
+.hidden {
+  display: none;
+}
+
