@@ -86,43 +86,40 @@
   </div>
 </section>
 <section class="section container">
-  <h2>You Are Not Alone</h2>
-
-  <p style="max-width:850px;margin:auto;color:#4f6f57;line-height:1.8;text-align:center">
-    Farming is a noble profession, but challenges are real.
-    Seeking help is a sign of strength, not weakness.
-    BhoomiBandhu stands with farmers to ensure
-    emotional well-being alongside agricultural success.
-  </p>
-</section>
-<section class="section container">
   <h2>Reach Out for Support</h2>
 
-  <p style="max-width:850px;margin:auto;text-align:center;color:#4f6f57;line-height:1.8">
+  <p class="support-intro">
     If you or someone you know is feeling overwhelmed, stressed, or anxious,
     help is available. Reaching out can make a real difference.
   </p>
 
-  <div class="contact-grid">
+  <div class="support-grid">
 
     <!-- Helpline Card -->
-    <div class="contact-card">
+    <div class="support-card helpline-card">
       <h3>📞 Farmer & Mental Health Helplines</h3>
+
       <ul>
-        <li><b>Kisan Call Centre:</b> 1800-180-1551</li>
-        <li><b>National Mental Health Helpline (Tele MANAS):</b> 14416</li>
-        <li><b>Suicide Prevention Helpline:</b> 9152987821</li>
-        <li><b>Available:</b> 24×7 Confidential Support</li>
+        <li><strong>Kisan Call Centre:</strong> 1800-180-1551</li>
+        <li><strong>Tele MANAS (Mental Health):</strong> 14416</li>
+        <li><strong>Suicide Prevention:</strong> 9152987821</li>
+        <li><strong>Availability:</strong> 24×7 Confidential Support</li>
       </ul>
+
+      <p class="helpline-note">
+        All calls are confidential and handled by trained professionals.
+      </p>
     </div>
 
-    <!-- Contact Form -->
-    <div class="contact-card">
+    <!-- Contact Form Card -->
+    <div class="support-card form-card">
       <h3>🧑‍⚕️ Talk to a Support Counselor</h3>
 
-      <form id="mentalContactForm">
-        <input type="text" id="mhName" placeholder="Your Name" required>
-        <input type="tel" id="mhPhone" placeholder="Mobile Number" required>
+      <form id="mentalContactForm" class="support-form">
+        <div class="form-row">
+          <input type="text" id="mhName" placeholder="Your Name" required>
+          <input type="tel" id="mhPhone" placeholder="Mobile Number" required>
+        </div>
 
         <select id="mhIssue" required>
           <option value="">Select Concern</option>
@@ -132,9 +129,14 @@
           <option>Family or Personal Issues</option>
         </select>
 
-        <textarea id="mhMessage" placeholder="Briefly describe how you are feeling" rows="4"></textarea>
+        <textarea
+          id="mhMessage"
+          placeholder="Briefly describe how you are feeling"
+          rows="4"></textarea>
 
-        <button type="submit" class="btn">Request Support</button>
+        <button type="submit" class="btn full-btn">
+          Request Support
+        </button>
       </form>
 
       <p id="mhResult" class="contact-result"></p>
@@ -142,6 +144,7 @@
 
   </div>
 </section>
+
 
 
 <footer>© 2025 BhoomiBandhu</footer>
@@ -158,6 +161,7 @@
 </script>
 </body>
 </html>
+
 
 
 
