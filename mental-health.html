@@ -95,12 +95,70 @@
     emotional well-being alongside agricultural success.
   </p>
 </section>
+<section class="section container">
+  <h2>Reach Out for Support</h2>
+
+  <p style="max-width:850px;margin:auto;text-align:center;color:#4f6f57;line-height:1.8">
+    If you or someone you know is feeling overwhelmed, stressed, or anxious,
+    help is available. Reaching out can make a real difference.
+  </p>
+
+  <div class="contact-grid">
+
+    <!-- Helpline Card -->
+    <div class="contact-card">
+      <h3>📞 Farmer & Mental Health Helplines</h3>
+      <ul>
+        <li><b>Kisan Call Centre:</b> 1800-180-1551</li>
+        <li><b>National Mental Health Helpline (Tele MANAS):</b> 14416</li>
+        <li><b>Suicide Prevention Helpline:</b> 9152987821</li>
+        <li><b>Available:</b> 24×7 Confidential Support</li>
+      </ul>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-card">
+      <h3>🧑‍⚕️ Talk to a Support Counselor</h3>
+
+      <form id="mentalContactForm">
+        <input type="text" id="mhName" placeholder="Your Name" required>
+        <input type="tel" id="mhPhone" placeholder="Mobile Number" required>
+
+        <select id="mhIssue" required>
+          <option value="">Select Concern</option>
+          <option>Stress & Anxiety</option>
+          <option>Financial Pressure</option>
+          <option>Crop Loss Stress</option>
+          <option>Family or Personal Issues</option>
+        </select>
+
+        <textarea id="mhMessage" placeholder="Briefly describe how you are feeling" rows="4"></textarea>
+
+        <button type="submit" class="btn">Request Support</button>
+      </form>
+
+      <p id="mhResult" class="contact-result"></p>
+    </div>
+
+  </div>
+</section>
 
 
 <footer>© 2025 BhoomiBandhu</footer>
-<script src="script.js"></script>
+<script src="script.js">
+  document.getElementById("mentalContactForm")?.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  document.getElementById("mhResult").innerText =
+    "✅ Thank you for reaching out. Our support team will contact you soon. You are not alone.";
+  
+  this.reset();
+});
+
+</script>
 </body>
 </html>
+
 
 
 
