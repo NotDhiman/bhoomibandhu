@@ -76,7 +76,6 @@
 
   <div class="interactive-grid">
 
-    <!-- Scheme Discovery -->
     <div class="info-card" onclick="toggleCard(this)">
       <h3>Scheme Discovery</h3>
       <p class="short-text">Find schemes relevant to your needs</p>
@@ -91,7 +90,6 @@
       </div>
     </div>
 
-    <!-- Eligibility Check -->
     <div class="info-card" onclick="toggleCard(this)">
       <h3>Eligibility Check</h3>
       <p class="short-text">Avoid rejection before applying</p>
@@ -106,7 +104,6 @@
       </div>
     </div>
 
-    <!-- Application Guidance -->
     <div class="info-card" onclick="toggleCard(this)">
       <h3>Application Guidance</h3>
       <p class="short-text">Apply correctly & confidently</p>
@@ -121,6 +118,54 @@
       </div>
     </div>
 
+  </div>
+</section>
+<section class="section container">
+  <h2>Check Your Scheme Eligibility</h2>
+
+  <div class="eligibility-card">
+    <form id="eligibilityForm">
+
+      <div class="form-grid">
+        <select id="scheme" required>
+          <option value="">Select Scheme</option>
+          <option value="pmkisan">PM-KISAN</option>
+          <option value="pmfby">PM Fasal Bima Yojana</option>
+          <option value="kcc">Kisan Credit Card</option>
+        </select>
+
+        <select id="category" required>
+          <option value="">Farmer Category</option>
+          <option value="small">Small / Marginal</option>
+          <option value="large">Large Farmer</option>
+        </select>
+
+        <input type="number" id="land" placeholder="Landholding (in hectares)" required>
+
+        <select id="season" required>
+          <option value="">Crop Season</option>
+          <option>Kharif</option>
+          <option>Rabi</option>
+          <option>Zaid</option>
+        </select>
+
+        <select id="aadhaar" required>
+          <option value="">Aadhaar Linked?</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+
+        <select id="bank" required>
+          <option value="">Bank Account Linked?</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn">Check Eligibility</button>
+    </form>
+
+    <div id="eligibilityResult" class="result-box hidden"></div>
   </div>
 </section>
 
@@ -192,3 +237,4 @@
 
 </body>
 </html>
+
