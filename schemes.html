@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Government Schemes</title>
+  <meta charset="UTF-8">
+  <title>Government Schemes | BhoomiBandhu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- HEADER -->
- <header>
+<!-- ===== HEADER ===== -->
+<header>
   <div class="container header-flex">
 
     <div class="logo">
@@ -28,32 +30,165 @@
 
   </div>
 </header>
+
+<!-- ===== HERO ===== -->
 <section class="hero">
   <div class="hero-content">
     <span class="hero-badge">🏛 Government Support</span>
-    <h1>Government Schemes</h1>
-    <p>Simple access to verified farmer welfare programs</p>
+    <h1>Government Schemes for Farmers</h1>
+    <p>
+      Discover, verify eligibility, and apply for farmer welfare schemes
+      with step-by-step guidance.
+    </p>
 
     <div class="hero-stats">
-      <div><strong>10+</strong><span>Schemes</span></div>
-      <div><strong>Easy</strong><span>Eligibility</span></div>
-      <div><strong>Secure</strong><span>Process</span></div>
+      <div>
+        <strong>10+</strong>
+        <span>Major Schemes</span>
+      </div>
+      <div>
+        <strong>Easy</strong>
+        <span>Eligibility</span>
+      </div>
+      <div>
+        <strong>Secure</strong>
+        <span>Process</span>
+      </div>
     </div>
   </div>
 </section>
 
-
+<!-- ===== INTRO ===== -->
 <section class="section container">
-  <div class="grid">
-    <div class="card">Scheme Discovery</div>
-    <div class="card">Eligibility Check</div>
-    <div class="card">Application Guidance</div>
+  <h2>Why Government Schemes Matter</h2>
+
+  <p style="max-width:900px;margin:auto;color:#4f6f57;line-height:1.8;text-align:center">
+    Government schemes provide financial security, risk protection,
+    and development opportunities to farmers. BhoomiBandhu simplifies
+    complex scheme information and helps farmers avoid missed benefits
+    due to lack of awareness or incorrect applications.
+  </p>
+</section>
+
+<!-- ===== INTERACTIVE SUPPORT ===== -->
+<section class="section container">
+  <h2>How BhoomiBandhu Helps</h2>
+
+  <div class="interactive-grid">
+
+    <!-- Scheme Discovery -->
+    <div class="info-card" onclick="toggleCard(this)">
+      <h3>Scheme Discovery</h3>
+      <p class="short-text">Find schemes relevant to your needs</p>
+
+      <div class="card-details">
+        <ul>
+          <li>Central & state government farmer schemes</li>
+          <li>Crop-specific subsidies and support programs</li>
+          <li>Equipment, irrigation & storage schemes</li>
+          <li>Income support & disaster relief initiatives</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Eligibility Check -->
+    <div class="info-card" onclick="toggleCard(this)">
+      <h3>Eligibility Check</h3>
+      <p class="short-text">Avoid rejection before applying</p>
+
+      <div class="card-details">
+        <ul>
+          <li>Farmer category (small / marginal)</li>
+          <li>Landholding size & land record requirements</li>
+          <li>Crop season & regional conditions</li>
+          <li>Aadhaar & bank account linkage verification</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Application Guidance -->
+    <div class="info-card" onclick="toggleCard(this)">
+      <h3>Application Guidance</h3>
+      <p class="short-text">Apply correctly & confidently</p>
+
+      <div class="card-details">
+        <ul>
+          <li>Required document checklist</li>
+          <li>Online & offline application steps</li>
+          <li>CSC, bank & agriculture office support</li>
+          <li>Common mistakes & delay prevention tips</li>
+        </ul>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<footer>© 2025 BhoomiBandhu</footer>
+<!-- ===== POPULAR SCHEMES ===== -->
+<section class="section container">
+  <h2>Popular Farmer Welfare Schemes</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>PM-KISAN Samman Nidhi</h3>
+      <p>
+        ₹6000 annual income support for eligible farmer families,
+        credited directly to bank accounts.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Pradhan Mantri Fasal Bima Yojana</h3>
+      <p>
+        Crop insurance coverage against losses due to natural
+        calamities, pests, and diseases.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Kisan Credit Card (KCC)</h3>
+      <p>
+        Easy access to short-term agricultural loans at
+        subsidized interest rates.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Gramin Bhandaran Yojana</h3>
+      <p>
+        Subsidy support for rural storage infrastructure
+        and warehouse development.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="section container">
+  <h2>Don’t Miss the Benefits Meant for You</h2>
+
+  <p style="max-width:850px;margin:auto;text-align:center;color:#4f6f57;line-height:1.8">
+    Many farmers miss government benefits due to lack of awareness
+    or incorrect applications. BhoomiBandhu ensures you stay informed,
+    eligible, and supported throughout the process.
+  </p>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  © 2025 BhoomiBandhu. All rights reserved.
+</footer>
+
+<!-- ===== JS ===== -->
 <script src="script.js"></script>
+
+<script>
+  function toggleCard(card) {
+    card.classList.toggle("active");
+  }
+</script>
+
 </body>
 </html>
-
-
